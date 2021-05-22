@@ -1,2 +1,3 @@
-# python-workspace
+# Python Workspace
+
 A repository to host all the materials and examples for learning and practising Python concepts 
