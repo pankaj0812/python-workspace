@@ -23,16 +23,16 @@ Pyenv helps us manage multiple versions of Python interpreters. This also allows
 4. Restart your shell using `exec $SHELL`.
 5. Validate **pyenv** version and install required Python version as given below:
 
-        $ pyenv --version
+        > pyenv --version
         pyenv version 2.0.0
 
-        $pyenv install 3.7.2
+        >pyenv install 3.7.2
         Downloading Python-3.7.2.tar.xz...
         ...
 6. Set the installed Python version as your global interpreter.
 
-        $ pyenv global 3.7.2
-        $ which python
+        > pyenv global 3.7.2
+        > which python
         /home/amiteshrai/.pyenv/shims/python
 
 ### Poetry
@@ -43,7 +43,7 @@ Poetry helps us manage our Python dependencies. Poetry makes sure that we have s
 
 1. Install poetry using [installer](https://github.com/python-poetry/poetry#installation).
 
-        $ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
+        > curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
 
         Retrieving Poetry metadata
 
@@ -53,5 +53,57 @@ Poetry helps us manage our Python dependencies. Poetry makes sure that we have s
 3. Update your shell using `exec $SHELL`.
 4. Check poetry version.
 
-        $ poetry --version
+        > poetry --version
         Poetry version 1.1.6
+
+## Project Setup
+
+Once the above tools are installed, initialize your Python project using **poetry** as:
+
+    > mkdir -p python-workspace
+    > cd python-workspace
+    > poetry init --no-interaction
+
+This will create a `pyproject.toml` file package configuration file specified in PEP 517 and 518
+
+    [tool.poetry]
+    name = "python-workspace"
+    version = "0.1.0"
+    description = ""
+    authors = ["Amitesh Rai <xxxxx@XXX.com>"]
+
+    [tool.poetry.dependencies]
+    python = "^3.7"
+
+    [tool.poetry.dev-dependencies]
+
+    [build-system]
+    requires = ["poetry-core>=1.0.0"]
+    build-backend = "poetry.core.masonry.api"
+
+### Creating And Managing Virtual Environments With Poetry
+
+To prevent your current project dependencies from interfering with with the system-wide Python installation, an isolated virtual environment with specific Python version and set of dependencies is essential.
+
+Poetry helps you with creating and managing virtual environments for your projects.
+
+#### Create Virtual Environment
+
+To create a virtual environment using Poetry, install the skeleton package using:
+
+    > cd python-workspace
+    > poetry install
+
+Now a virtual environment dedicated to your project is created. Poetry has installed initial packages into it and also create a *lock* file named `poetry.lock`
+
+#### Running Python In Virtual Environment
+
+Since our virtual environment is already created, we can run a Python session inside it as:
+
+    > poetry run python
+    Python 3.7.2 (default, May 26 2021, 13:11:13)
+    [GCC 9.3.0] on linux
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> print("Hello Python")
+    Hello Python
+    >>>
