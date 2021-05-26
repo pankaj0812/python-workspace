@@ -1,0 +1,70 @@
+{
+    "python.formatting.provider": "autopep8",
+    "python.formatting.autopep8Args": [
+        "--max-line-length",
+        "120",
+        "--aggressive"
+    ],
+    "python.linting.lintOnSave": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": ["--max-line-length=120", "--ignore=E501"],
+    "python.analysis.disabled": ["unresolved-import", "undefined-variable"],
+
+    // Editor
+    "editor.fontFamily": "Fira Code Retina", // You need to install first
+    "editor.fontSize": 15,
+    "editor.tabSize": 4,
+    "editor.glyphMargin": true,
+    "editor.fontLigatures": true,
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 4,
+    "editor.cursorBlinking": "solid",
+    "editor.folding": true,
+    "editor.autoIndent": "advanced",
+    "editor.renderIndentGuides": true,
+    "editor.renderLineHighlight": "gutter",
+    "editor.renderWhitespace": "none",
+    "editor.trimAutoWhitespace": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "editor.snippetSuggestions": "top",
+    "editor.codeLens": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": false,
+        "source.fixAll": true
+    },
+
+    // Files & Folder Settings
+    "files.exclude": {
+        "bin": true,
+        "lib": true,
+        "lib64": true,
+        "include": true,
+        "share": true,
+        "etc": true,
+        "local": true,
+        "**/*.pyc": { "when": "$(basename).py" },
+        "**/__pycache__/": true,
+        ".mypy_cache": true,
+        "images": true,
+        "**/.ipynb_checkpoints": true
+    },
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+
+    // Markdown Linting
+    "markdownlint.run": "onSave",
+    "markdownlint.config": {
+        "MD013": false,
+        "list-indent": true,
+        "list-marker-space": false,
+        "ul-indent": false
+    },
+
+    // Terminal
+    "terminal.integrated.fontFamily": "Fira Code Retina",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontWeight": "100"
+}
