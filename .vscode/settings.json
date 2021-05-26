@@ -1,5 +1,5 @@
 {
-    "python.formatting.provider": "autopep8",
+    "python.formatting.provider": "black",
     "python.formatting.autopep8Args": [
         "--max-line-length",
         "120",
@@ -66,5 +66,11 @@
     // Terminal
     "terminal.integrated.fontFamily": "Fira Code Retina",
     "terminal.integrated.fontSize": 15,
-    "terminal.integrated.fontWeight": "100"
+    "terminal.integrated.fontWeight": "100",
+
+    // Custom
+    "customizeUI.activityBarHideSettings": true,
+    "customizeUI.font.regular": "Helvetica Nueve",
+    "customizeUI.font.monospace": "Fira Code",
+    "cSpell.language": "en,en-US",
 }
