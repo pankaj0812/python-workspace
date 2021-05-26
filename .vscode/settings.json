@@ -70,7 +70,5 @@
 
     // Custom
     "customizeUI.activityBarHideSettings": true,
-    "customizeUI.font.regular": "Helvetica Nueve",
-    "customizeUI.font.monospace": "Fira Code",
     "cSpell.language": "en,en-US",
 }
