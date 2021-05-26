@@ -107,3 +107,22 @@ Since our virtual environment is already created, we can run a Python session in
     >>> print("Hello Python")
     Hello Python
     >>>
+
+### Installing Dependencies Using Poetry
+
+Install dependencies using Poetry as:
+
+    > poetry add requests click
+
+Install development dependencies using Poetry as:
+
+    > poetry add --dev flake8 autopep8 black pytest coverage[toml] pytest-cov nox
+
+### Updating VSCode Python Interpreter Path
+
+Once the virtual environment is created using Poetry, you can use Poetry to updated the VSCode with Python interpreter to be used for current project.
+
+    > poetry env info --path
+    /home/amiteshrai/.cache/pypoetry/virtualenvs/python-workspace-nQrJ2JzJ-py3.7
+
+Use the output of the above command to update the Python interpreter using the command palette in VSCode

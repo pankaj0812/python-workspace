@@ -1,14 +1,16 @@
 {
+    "python.pythonPath": "/home/amiteshrai/.pyenv/versions/3.7.2",
     "python.formatting.provider": "black",
-    "python.formatting.autopep8Args": [
+    "python.formatting.blackArgs": [
         "--max-line-length",
-        "120",
+        "88",
         "--aggressive"
     ],
     "python.linting.lintOnSave": true,
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
-    "python.linting.pylintArgs": ["--max-line-length=120", "--ignore=E501"],
+    "python.linting.pylintPath": "/home/amiteshrai/.local/bin/pylint",
+    "python.linting.pylintArgs": ["--max-line-length=88", "--ignore=E501"],
     "python.analysis.disabled": ["unresolved-import", "undefined-variable"],
 
     // Editor
@@ -71,4 +73,5 @@
     // Custom
     "customizeUI.activityBarHideSettings": true,
     "cSpell.language": "en,en-US",
+    "python.linting.flake8Enabled": false,
 }
