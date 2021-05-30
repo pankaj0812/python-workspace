@@ -37,7 +37,7 @@ Pyenv helps us manage multiple versions of Python interpreters. This also allows
 
 ### Poetry
 
-Poetry helps us manage our Python dependencies. Poetry makes sure that we have same versions of our Python packages installed across environments such as develop, staging, and production. Furthermore, Poetry can be used to publish Python packages as well.
+Poetry helps us manage our Python dependencies. Poetry makes sure that we have same versions of our Python dependencies installed across environments such as develop, staging, and production. Furthermore, Poetry can be used to publish Python dependencies as well.
 
 #### Installing Poetry
 
@@ -56,6 +56,18 @@ Poetry helps us manage our Python dependencies. Poetry makes sure that we have s
         > poetry --version
         Poetry version 1.1.6
 
+#### Useful Poetry Commands
+
+| Command  | Description |
+| ------------- | ------------- |
+| poetry new `[project-name]`  | Initialize a new Python project  |
+| poetry init  | Create a `pyproject.toml` file interactively  |
+| poetry install  | Install the dependencies inside the `pyproject.toml` file  |
+| poetry add `[package-name]`  | Add a dependency to a virtual environment |
+| poetry add -D `[package-name]`  | Add a dev dependency to a virtual environment  |
+| poetry remove `[package-name]`  | Remove a dependency from a virtual environment  |
+| poetry remove -D `[package-name]`  | Remove a dev dependency from a virtual environment  |
+
 ## Project Setup
 
 Once the above tools are installed, initialize your Python project using **poetry** as:
@@ -64,7 +76,7 @@ Once the above tools are installed, initialize your Python project using **poetr
     > cd python-workspace
     > poetry init --no-interaction
 
-This will create a `pyproject.toml` file package configuration file specified in PEP 517 and 518
+This will create a `pyproject.toml` file dependency configuration file specified in PEP 517 and 518
 
     [tool.poetry]
     name = "python-workspace"
@@ -89,12 +101,12 @@ Poetry helps you with creating and managing virtual environments for your projec
 
 #### Create Virtual Environment
 
-To create a virtual environment using Poetry, install the skeleton package using:
+To create a virtual environment using Poetry, install the skeleton dependency using:
 
     > cd python-workspace
     > poetry install
 
-Now a virtual environment dedicated to your project is created. Poetry has installed initial packages into it and also create a *lock* file named `poetry.lock`
+Now a virtual environment dedicated to your project is created. Poetry has installed initial dependencies into it and also create a *lock* file named `poetry.lock`
 
 #### Running Python In Virtual Environment
 

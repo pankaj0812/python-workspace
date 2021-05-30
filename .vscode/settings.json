@@ -1,17 +1,18 @@
 {
-    "python.pythonPath": "/home/amiteshrai/.pyenv/versions/3.7.2",
+    // Python
     "python.formatting.provider": "black",
-    "python.formatting.blackArgs": [
-        "--max-line-length",
-        "88",
-        "--aggressive"
-    ],
     "python.linting.lintOnSave": true,
     "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
-    "python.linting.pylintPath": "/home/amiteshrai/.local/bin/pylint",
-    "python.linting.pylintArgs": ["--max-line-length=88", "--ignore=E501"],
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": ["--max-line-length=88"],
     "python.analysis.disabled": ["unresolved-import", "undefined-variable"],
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true,
 
     // Editor
     "editor.fontFamily": "Fira Code Retina", // You need to install first
@@ -55,6 +56,9 @@
     "files.trimFinalNewlines": true,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
+    "files.associations": {
+        "*.toml": "ini",
+    },
 
     // Markdown Linting
     "markdownlint.run": "onSave",
@@ -73,5 +77,4 @@
     // Custom
     "customizeUI.activityBarHideSettings": true,
     "cSpell.language": "en,en-US",
-    "python.linting.flake8Enabled": false,
 }
