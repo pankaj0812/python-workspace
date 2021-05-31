@@ -1,6 +1,13 @@
 {
     // Python
     "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "88"
+    ],
+    "[python]": {
+        "editor.rulers": [88]
+    },
     "python.linting.lintOnSave": true,
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": false,
@@ -20,9 +27,7 @@
     "editor.tabSize": 4,
     "editor.glyphMargin": true,
     "editor.fontLigatures": true,
-    "editor.cursorStyle": "line",
-    "editor.cursorWidth": 4,
-    "editor.cursorBlinking": "solid",
+    "editor.cursorWidth": 2,
     "editor.folding": true,
     "editor.autoIndent": "advanced",
     "editor.renderIndentGuides": true,
@@ -30,7 +35,6 @@
     "editor.renderWhitespace": "none",
     "editor.trimAutoWhitespace": true,
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": false,
     "editor.snippetSuggestions": "top",
     "editor.codeLens": true,
     "editor.codeActionsOnSave": {
@@ -40,7 +44,6 @@
 
     // Files & Folder Settings
     "files.exclude": {
-        "bin": true,
         "lib": true,
         "lib64": true,
         "include": true,
@@ -50,7 +53,6 @@
         "**/*.pyc": { "when": "$(basename).py" },
         "**/__pycache__/": true,
         ".mypy_cache": true,
-        "images": true,
         "**/.ipynb_checkpoints": true
     },
     "files.trimFinalNewlines": true,
@@ -62,12 +64,6 @@
 
     // Markdown Linting
     "markdownlint.run": "onSave",
-    "markdownlint.config": {
-        "MD013": false,
-        "list-indent": true,
-        "list-marker-space": false,
-        "ul-indent": false
-    },
 
     // Terminal
     "terminal.integrated.fontFamily": "Fira Code Retina",
@@ -77,4 +73,12 @@
     // Custom
     "customizeUI.activityBarHideSettings": true,
     "cSpell.language": "en,en-US",
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "*-repo.json"
+            ],
+            "url": "/schemas/all-schema.json"
+        }
+    ]
 }
